@@ -1,0 +1,147 @@
+# ============================================
+# ARCHIVOS DE COMPILACIÓN LATEX
+# ============================================
+# Archivos auxiliares de LaTeX
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Archivos de bibliografía
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Archivos de compilación
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Archivos de índice
+*.alg
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+*.idx
+*.ilg
+*.ind
+
+# Archivos de referencias cruzadas
+*.ist
+*.slg
+*.syg
+*.syi
+*.xdy
+
+# Archivos de listados
+*.lol
+
+# Archivos de paquetes
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# Archivos de minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
+
+# Archivos de sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# Archivos de gnuplottex
+*-gnuplottex-*
+
+# Archivos de pythontex
+*.pytxcode
+pythontex-files-*/
+
+# Archivos de Knitr
+*-concordance.tex
+*.tikz
+*-tikzDictionary
+
+# Archivos de xindy
+*.xdy
+
+# Synctex
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Archivos de beamer
+*.nav
+*.snm
+*.vrb
+
+# Latexindent
+*.bak[0-9]*
+indent.log
+
+# ============================================
+# ARCHIVOS TEMPORALES DE R
+# ============================================
+# Historial y datos de R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# Archivos de sesión
+.Rproj.user/
+
+# Archivos temporales de knitr
+*_cache/
+/cache/
+*_files/
+
+# OAuth
+.httr-oauth
+.secrets
+
+# Archivos de RStudio
+*.Rproj
+
+# ============================================
+# ARCHIVOS DE JUPYTER NOTEBOOK
+# ============================================
+# Checkpoints de Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ============================================
+# ARCHIVOS DE COMPILACIÓN ORGANIZADOS
+# ============================================
+# Carpetas de build generadas
+*/LaTeX/build/
+*/LaTeX/out/
+*/LaTeX/output/
+build/
+out/
+output/
+

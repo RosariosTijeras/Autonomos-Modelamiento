@@ -1,0 +1,70 @@
+{
+    "latex-workshop.latex.outDir": "build",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex → biber → pdflatex",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex (solo)",
+            "tools": [
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-aux-directory=build",
+                "-output-directory=build",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "build/%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.magic.args": [],
+    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.latex.clean.enabled": false,
+    // ============================================
+    // CONFIGURACIÓN SYNCTEX - SINCRONIZACIÓN BIDIRECCIONAL
+    // ============================================
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.synctex.path": "synctex",
+    "latex-workshop.view.pdf.synctex.enabled": true,
+    "latex-workshop.view.pdf.tab.editorGroup": "right",
+    "latex-workshop.view.pdf.zoom": "page-width",
+    // Configuración específica para archivos en carpeta build
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "latex-workshop.latex.build.clearCache.enabled": true,
+    // Configuración para forward search (editor → PDF)
+    "latex-workshop.view.pdf.hand": false,
+    "latex-workshop.view.pdf.invertMode.enabled": "never",
+    "latex-workshop.view.pdf.color.dark.pageColorsBackground": "#ffffff",
+    "latex-workshop.view.pdf.color.dark.pageColorsForeground": "#000000",
+    // Configuración para backward search (PDF → editor)
+    "latex-workshop.view.pdf.external.viewer.command": "",
+    "latex-workshop.view.pdf.external.viewer.args": [],
+    "latex-workshop.view.pdf.external.synctex.command": "",
+    "latex-workshop.view.pdf.external.synctex.args": [],
+    // Habilitar doble clic en PDF para ir al código fuente
+    "latex-workshop.synctex.indicator.enabled": true,
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click"
+}

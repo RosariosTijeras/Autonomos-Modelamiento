@@ -1,0 +1,630 @@
+\documentclass[12pt, letterpaper]{article}
+
+% ============================================
+% PAQUETES OPTIMIZADOS - APA v7 COMPLETO
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% Bibliografía APA v7 (optimizada)
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber, sorting=nyt]{biblatex}
+\addbibresource{bibliografia.bib}
+
+% Paquetes matemáticos (esenciales)
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Paquetes de gráficos y tablas (optimizados)
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Paquetes para manejo de texto y márgenes
+\usepackage{microtype}      % Mejora el espaciado y evita desbordamientos
+\usepackage{ragged2e}       % Mejor justificación de texto
+\usepackage{hyphenat}       % Control de separación de palabras
+\usepackage{url}            % Para URLs que pueden ser muy largas
+\usepackage{xcolor}         % Para colores (necesario para algunos paquetes)
+\usepackage{enumitem}       % Control avanzado de listas
+\usepackage{calc}           % Para cálculos en longitudes
+\usepackage{array}          % Para manejo avanzado de tablas y alineación
+
+% ============================================
+% CONFIGURACIÓN APA v7: MÁRGENES Y ESPACIADO
+% ============================================
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    top=2.54cm,    % 1 pulgada (APA v7)
+    bottom=2.54cm, % 1 pulgada (APA v7)
+    left=2.54cm,   % 1 pulgada (APA v7)
+    right=2.54cm   % 1 pulgada (APA v7)
+}
+
+% Doble espaciado (APA v7)
+\usepackage{setspace}
+\doublespacing
+
+% ============================================
+% CONFIGURACIÓN PARA EVITAR DESBORDAMIENTOS
+% ============================================
+% Configuración para evitar overfull hbox con texto largo
+\tolerance=2000
+\emergencystretch=5em
+\hbadness=3000
+\linepenalty=4
+\pretolerance=10000
+
+% Configuración de microtype para mejor tipografía
+\microtypesetup{
+    expansion=true,
+    protrusion=true,
+    tracking=true,
+    kerning=true,
+    spacing=true
+}
+
+% Configuración adicional para manejo de texto largo
+\setlength{\rightskip}{0pt plus 2em}
+\setlength{\parfillskip}{0pt plus 1fil}
+
+% Permitir separación de palabras con guión en palabras compuestas
+% NOTA: \hyphenation no funciona con palabras acentuadas en español
+% Se usa babel para manejar separación automática de palabras en español
+\hyphenation{
+    Universidad
+    Nacional
+    Chimborazo
+    Ingenieria
+    Modelamiento
+    estadistico
+    analisis
+    distribucion
+    correlacion
+}
+
+% ============================================
+% CONFIGURACIÓN DE LISTAS PARA EVITAR DESBORDAMIENTOS
+% ============================================
+% Configuración global para todas las listas con mejor manejo de texto largo
+\setlist[enumerate]{
+    leftmargin=*,
+    itemsep=0.3\baselineskip,
+    parsep=0pt,
+    topsep=0.3\baselineskip,
+    labelsep=0.5em,
+    listparindent=\parindent,
+    itemindent=0pt,
+    align=left,
+    widest=9
+}
+
+\setlist[itemize]{
+    leftmargin=*,
+    itemsep=0.3\baselineskip,
+    parsep=0pt,
+    topsep=0.3\baselineskip,
+    labelsep=0.5em,
+    listparindent=\parindent,
+    itemindent=0pt
+}
+
+% Configuración específica para listas anidadas
+\setlist[enumerate,2]{
+    leftmargin=*,
+    itemsep=0.2\baselineskip,
+    label=\alph*)
+}
+
+\setlist[itemize,2]{
+    leftmargin=*,
+    itemsep=0.2\baselineskip,
+    label=--
+}
+
+% ============================================
+% CONFIGURACIÓN APA v7: ENCABEZADOS Y PIE DE PÁGINA
+% ============================================
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt} % Corregir altura del encabezado
+\pagestyle{fancy}
+\fancyhf{} % Limpiar encabezados
+
+% Running head (encabezado corto)
+\fancyhead[L]{} % Se configurará después para páginas normales
+\fancyhead[R]{\thepage} % Número de página arriba a la derecha (APA v7)
+
+% Línea del encabezado
+\renewcommand{\headrulewidth}{0pt} % Sin línea (APA v7)
+
+% ============================================
+% CONFIGURACIÓN APA v7: TÍTULOS Y SECCIONES
+% ============================================
+\usepackage{titlesec}
+
+% Nivel 1: Centrado, Negrita, Capitalizado
+\titleformat{\section}
+{\normalfont\large\bfseries\centering}{\thesection}{1em}{}
+
+% Nivel 2: Alineado a la izquierda, Negrita
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries\raggedright}{\thesubsection}{1em}{}
+
+% Nivel 3: Alineado a la izquierda, Negrita, Cursiva
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries\itshape\raggedright}{\thesubsubsection}{1em}{}
+
+% ============================================
+% CONFIGURACIÓN APA v7: SANGRÍA DE PÁRRAFO
+% ============================================
+\setlength{\parindent}{1.27cm} % 0.5 pulgadas (APA v7)
+
+% ============================================
+% INFORMACIÓN DEL DOCUMENTO (para portada APA)
+% ============================================
+\newcommand{\runtitulo}{[Título Corto del Trabajo]}
+\newcommand{\titulo}{[Título Completo del Trabajo]}
+\newcommand{\autores}{[Nombre Autor 1, Nombre Autor 2, Nombre Autor 3]}
+\newcommand{\afiliacion}{[Nombre de la Universidad]}
+\newcommand{\facultad}{[Nombre de la Facultad]}
+\newcommand{\carrera}{[Nombre de la Carrera]}
+\newcommand{\materia}{[Nombre de la Materia]}
+\newcommand{\docente}{[Nombre del Docente]}
+\newcommand{\semestre}{[Número del Semestre]}
+\newcommand{\ciudad}{[Ciudad - País]}
+
+\begin{document}
+% ============================================
+% PORTADA APA v7
+% ============================================
+\begin{titlepage}
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[R]{\thepage}
+
+    \centering
+
+    \vspace{0.5cm}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{../Graficos/Imagen1.png}
+    \end{figure}
+
+    % Título (doble espaciado, negrita, centrado)
+    {\Large\bfseries \titulo \par}
+
+    \vspace{2cm}
+
+    % Nombre de los autores
+    {\large \autores \par}
+
+    \vspace{0.5cm}
+
+    % Afiliación institucional
+    {\large \afiliacion \par}
+    {\normalsize \facultad \par}
+    {\normalsize \carrera \par}
+
+    \vspace{1cm}
+
+    % Información del curso
+    {\normalsize \textbf{Materia:} \materia \par}
+    {\normalsize \textbf{Docente:} \docente \par}
+    {\normalsize \textbf{Semestre:} \semestre \par}
+
+    \vfill
+
+    % Fecha y lugar
+    {\normalsize \ciudad \par}
+    {\normalsize \today \par}
+\end{titlepage}
+
+% ============================================
+% CUERPO DEL DOCUMENTO
+% ============================================
+\newpage
+\setcounter{page}{2}
+
+\section{Introducción}
+
+ [Escribir la introducción del trabajo. Describir el contexto del problema, su relevancia y justificación. Incluir antecedentes del tema y la importancia del estudio en el área específica.]
+
+\subsection{Planteamiento del Problema}
+
+[Describir claramente el problema que se abordará en este trabajo. Explicar la situación problemática, sus causas y consecuencias.]
+
+\subsection{Preguntas de Investigación}
+
+\begin{enumerate}
+    \item [Escribir la primera pregunta de investigación específica]
+    \item [Escribir la segunda pregunta de investigación específica]
+    \item [Agregar más preguntas si es necesario]
+\end{enumerate}
+
+\subsection{Objetivos}
+
+\subsubsection{Objetivo General}
+
+[Escribir el objetivo general del trabajo - debe ser amplio y abarcar el propósito principal del estudio]
+
+\subsubsection{Objetivos Específicos}
+
+\begin{enumerate}
+    \item [Escribir el primer objetivo específico - debe ser medible y alcanzable]
+    \item [Escribir el segundo objetivo específico - debe contribuir al objetivo general]
+    \item [Escribir el tercer objetivo específico - puede incluir aspectos metodológicos]
+    \item [Agregar más objetivos específicos según sea necesario]
+\end{enumerate}
+
+\subsection{Hipótesis}
+
+\textbf{Hipótesis nula ($H_{0}$):} [Escribir la hipótesis nula]
+
+\textbf{Hipótesis alternativa ($H_{1}$):} [Escribir la hipótesis alternativa]
+
+Donde [explicar los parámetros]. Para la prueba de hipótesis se empleará
+un nivel de significancia de $\alpha = 0.05$.
+
+\section{Marco Teórico}
+
+ [Desarrollar el marco teórico con referencias bibliográficas relevantes. Incluir conceptos fundamentales, teorías relacionadas y estudios previos. Para citar usar: \textcite{autor2023} para narrativas o \parencite{autor2023} para parentéticas]
+
+\subsection{[Primer Concepto o Teoría Importante]}
+
+[Desarrollar el primer concepto teórico fundamental para el estudio]
+
+\subsection{[Segundo Concepto o Teoría Importante]}
+
+[Desarrollar el segundo concepto teórico relevante]
+
+\subsection{[Estudios Previos o Antecedentes]}
+
+[Revisar literatura previa y estudios relacionados con el tema]
+
+\section{Metodología}
+
+\subsection{Datos}
+
+[Describir el dataset utilizado, sus características y procedencia. Incluir información sobre el tamaño de la muestra, variables incluidas, criterios de selección y limitaciones de los datos]
+
+\subsection{Métodos Estadísticos}
+
+[Describir los métodos estadísticos que se utilizarán. Explicar la justificación para la selección de cada método y cómo se relacionan con los objetivos del estudio]
+
+\subsection{Criterios de Inclusión y Exclusión}
+
+[Si aplica, describir los criterios utilizados para incluir o excluir observaciones del análisis]
+
+\subsection{Software y Herramientas}
+
+[Describir el software y las herramientas utilizadas para el análisis. Ejemplo:]
+
+El análisis estadístico se realizó utilizando [nombre del software], empleando los siguientes paquetes/librerías especializadas:
+
+\begin{itemize}
+    \item [Nombre del paquete/librería 1]: [Descripción de su uso en el análisis]
+    \item [Nombre del paquete/librería 2]: [Descripción de su uso en el análisis]
+    \item [Nombre del paquete/librería 3]: [Descripción de su uso en el análisis]
+    \item [Agregar más según sea necesario]
+\end{itemize}
+
+\section{Resultados}
+
+ [Introducir la sección de resultados explicando la estructura del análisis y los principales hallazgos que se presentarán]
+
+\subsection{Exploración del Dataset}
+
+[Describir las características generales del dataset analizado]
+
+El análisis se realizó utilizando el dataset [nombre del dataset], que contiene información relevante para los objetivos planteados. El dataset seleccionado presenta las siguientes características:
+
+\begin{itemize}
+    \item \textbf{[Nombre de Variable 1]}: [Descripción de la variable y su rol en el estudio]
+    \item \textbf{[Nombre de Variable 2]}: [Descripción de la variable y su rol en el estudio]
+    \item \textbf{[Agregar más variables según sea necesario]}
+\end{itemize}
+
+[Describir los resultados de la exploración inicial, incluyendo completitud de datos, valores faltantes, etc.]
+
+\begin{table}[H]
+    \centering
+    \caption{Estructura y Completitud del Dataset}
+    \begin{tabular}{@{}l>{\centering}p{2.5cm}>{\centering}p{2.5cm}>{\centering\arraybackslash}p{2cm}@{}}
+        \toprule
+        \textbf{Variable} & \textbf{Observa-} \textbf{ciones} & \textbf{Valores} \textbf{Perdidos} & \textbf{Comple-} \textbf{titud} \\
+        \midrule
+        {[}Variable 1{]}  & {[}n{]}                           & {[}número{]}                       & {[}porcentaje\%{]}              \\
+        {[}Variable 2{]}  & {[}n{]}                           & {[}número{]}                       & {[}porcentaje\%{]}              \\
+        {[}Variable 3{]}  & {[}n{]}                           & {[}número{]}                       & {[}porcentaje\%{]}              \\
+        \midrule
+        \textbf{Total}    & {[}n{]}                           & {[}número total{]}                 & {[}porcentaje\%{]}              \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:estructura}
+
+    \vspace{0.2cm}
+    \textit{Nota.} [Agregar nota explicativa sobre la tabla y los datos presentados]
+\end{table}
+
+\subsection{Análisis Descriptivo}
+
+[Describir el propósito del análisis descriptivo y los estadísticos que se calcularán]
+
+Se calcularon medidas de tendencia central y dispersión para caracterizar las variables de estudio. La Tabla \ref{tab:descriptivas} resume estos estadísticos descriptivos.
+
+\begin{table}[H]
+    \centering
+    \caption{Estadísticas Descriptivas de las Variables de Estudio}
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{@{}lcccccc@{}}
+            \toprule
+            \textbf{Variable} & \textbf{Media} & \textbf{Mediana} & \textbf{DE} & \textbf{Mín} & \textbf{Máx} & \textbf{n} \\
+            \midrule
+            {[}Variable 1{]}  & {[}valor{]}    & {[}valor{]}      & {[}valor{]} & {[}valor{]}  & {[}valor{]}  & {[}n{]}    \\
+            {[}Variable 2{]}  & {[}valor{]}    & {[}valor{]}      & {[}valor{]} & {[}valor{]}  & {[}valor{]}  & {[}n{]}    \\
+            {[}Variable 3{]}  & {[}valor{]}    & {[}valor{]}      & {[}valor{]} & {[}valor{]}  & {[}valor{]}  & {[}n{]}    \\
+            \bottomrule
+        \end{tabular}%
+    }
+    \label{tab:descriptivas}
+
+    \vspace{0.2cm}
+    \textit{Nota.} DE = Desviación Estándar; Mín = Mínimo; Máx = Máximo; n = Tamaño de muestra.
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.45\textwidth]{../Graficos/[nombre_grafico1].png}
+    % \hfill
+    % \includegraphics[width=0.45\textwidth]{../Graficos/[nombre_grafico2].png}
+    \rule{5cm}{3cm} % Placeholder para gráfico
+    \hfill
+    \rule{5cm}{3cm} % Placeholder para gráfico
+    \caption{[Título descriptivo de los gráficos mostrados]}
+    \label{fig:[etiqueta_descriptiva]}
+\end{figure}
+
+Los hallazgos principales del análisis descriptivo incluyen:
+
+\begin{itemize}
+    \item [Descripción del primer hallazgo principal del análisis descriptivo]
+    \item [Descripción del segundo hallazgo importante observado en los datos]
+    \item [Descripción del tercer hallazgo relevante o patrón identificado]
+    \item [Agregar más hallazgos según sea necesario]
+\end{itemize}
+
+\subsection{[Nombre de la Prueba o Análisis Específico]}
+
+[Describir el propósito de esta sección de análisis específica]
+
+Se evaluó [descripción del análisis] mediante [nombre de la prueba/método], cuya hipótesis nula establece que [descripción de H0].
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados de [Nombre de la Prueba]}
+    \begin{tabular}{@{}l>{\centering}p{2.5cm}>{\centering}p{2cm}>{\centering\arraybackslash}p{3cm}@{}}
+        \toprule
+        \textbf{Variable} & \textbf{Estadístico} \textbf{{[}Símbolo{]}} & \textbf{p-valor} & \textbf{Decisión} \textbf{($\alpha = 0.05$)} \\
+        \midrule
+        {[}Variable 1{]}  & {[}valor{]}                                 & {[}valor{]}      & {[}Decisión{]}                               \\
+        {[}Variable 2{]}  & {[}valor{]}                                 & {[}valor{]}      & {[}Decisión{]}                               \\
+        {[}Variable 3{]}  & {[}valor{]}                                 & {[}valor{]}      & {[}Decisión{]}                               \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:[etiqueta_tabla]}
+
+    \vspace{0.2cm}
+    \textit{Nota.} [Agregar nota explicativa sobre la interpretación de los resultados]
+\end{table}
+
+\subsection{[Nombre del Análisis de Correlación/Asociación]}
+
+[Describir el propósito del análisis de correlación o asociación]
+
+Se calculó [tipo de coeficiente] para evaluar la asociación [lineal/no lineal] entre las variables de interés:
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados del Análisis de [Tipo de Correlación]}
+    \begin{tabular}{@{}lc@{}}
+        \toprule
+        \textbf{Estadístico}                              & \textbf{Valor} \\
+        \midrule
+        Coeficiente de {[}tipo{]} ($\{[\}$símbolo$\{]\}$) & {[}valor{]}    \\
+        Estadístico $[letra]$                             & [valor]        \\
+        Grados de libertad                                & [valor]        \\
+        p-valor                                           & [valor]        \\
+        Intervalo de confianza [porcentaje]\%             & [intervalo]    \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:[etiqueta_correlacion]}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.75\textwidth]{../Graficos/[nombre_grafico_correlacion].png}
+    \rule{8cm}{5cm} % Placeholder para gráfico de correlación
+    \caption{[Título descriptivo del gráfico de correlación]}
+    \label{fig:[etiqueta_correlacion]}
+\end{figure}
+
+\subsection{[Nombre del Modelo Estadístico]}
+
+Se calculó el coeficiente de correlación de Pearson para evaluar la asociación lineal
+entre las variables de interés:
+
+\begin{table}[H]
+    \centering
+    \caption{Resultados del Análisis de Correlación de Pearson}
+    \begin{tabular}{@{}lc@{}}
+        \toprule
+        \textbf{Estadístico}             & \textbf{Valor} \\
+        \midrule
+        Coeficiente de correlación ($r$) & [valor]        \\
+        Estadístico $t$                  & [valor]        \\
+        Grados de libertad               & [valor]        \\
+        p-valor                          & [valor]        \\
+        Intervalo de confianza 95\%      & [intervalo]    \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:correlacion}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.75\textwidth]{../Graficos/correlacion.png}
+    \rule{8cm}{5cm} % Placeholder para gráfico de correlación
+    \caption{Gráfico de dispersión con línea de tendencia}
+    \label{fig:correlacion}
+\end{figure}
+
+\subsection{Modelo Estadístico}
+
+Se ajustó un modelo estadístico apropiado para responder a las preguntas de investigación.
+El modelo se puede expresar como:
+
+\begin{equation}
+    Y = \beta_0 + \beta_1 X + \varepsilon
+    \label{eq:modelo}
+\end{equation}
+
+Donde $Y$ es la variable dependiente, $X$ es la variable independiente, $\beta_0$ es el
+intercepto, $\beta_1$ es la pendiente y $\varepsilon$ es el término de error.
+
+\subsubsection{Estimación de Coeficientes}
+
+\begin{table}[H]
+    \centering
+    \caption{Coeficientes del Modelo Estadístico}
+    \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        \textbf{Coeficiente}   & \textbf{Estimación} & \textbf{EE} & \textbf{Estadístico t} & \textbf{p-valor} \\
+        \midrule
+        $\beta_0$ (Intercepto) & [valor]             & [valor]     & [valor]                & [valor]          \\
+        $\beta_1$ (Pendiente)  & [valor]             & [valor]     & [valor]                & [valor]          \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:coeficientes}
+
+    \vspace{0.2cm}
+    \textit{Nota.} EE = Error Estándar.
+\end{table}
+
+\subsubsection{Bondad de Ajuste}
+
+\begin{table}[H]
+    \centering
+    \caption{Métricas de Bondad de Ajuste del Modelo}
+    \begin{tabular}{@{}lc@{}}
+        \toprule
+        \textbf{Métrica}                     & \textbf{Valor} \\
+        \midrule
+        Coeficiente de determinación ($R^2$) & [valor]        \\
+        Error estándar residual              & [valor]        \\
+        Estadístico F                        & [valor]        \\
+        p-valor (prueba F)                   & [valor]        \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:bondad}
+\end{table}
+
+\subsubsection{Diagnóstico de Residuos}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{../Graficos/residuos.png}
+    \rule{10cm}{6cm} % Placeholder para gráficos de diagnóstico
+    \caption{Gráficos de diagnóstico del modelo}
+    \label{fig:residuos}
+\end{figure}
+
+\section{Discusión}
+
+\subsection{Interpretación de los Hallazgos}
+
+[Introducir la sección de discusión explicando cómo se interpretarán los resultados]
+
+Los resultados del análisis proporcionan evidencia para evaluar las hipótesis planteadas. Los principales hallazgos se interpretan de la siguiente manera:
+
+\begin{enumerate}
+    \item [Interpretación del primer hallazgo principal en relación con la literatura existente]
+    \item [Interpretación del segundo hallazgo principal y sus implicaciones teóricas]
+    \item [Interpretación de las implicaciones estadísticas y su significado práctico]
+    \item [Agregar más interpretaciones según sea necesario]
+\end{enumerate}
+
+\subsection{Limitaciones del Estudio}
+
+Es importante reconocer las siguientes limitaciones del presente estudio:
+
+\begin{itemize}
+    \item [Primera limitación metodológica identificada y su impacto en los resultados]
+    \item [Segunda limitación relacionada con los datos o la muestra utilizada]
+    \item [Tercera limitación del diseño del estudio o las técnicas analíticas empleadas]
+    \item [Agregar más limitaciones según sea necesario]
+\end{itemize}
+
+\subsection{Implicaciones}
+
+Los resultados tienen implicaciones importantes tanto desde el punto de vista teórico como práctico:
+
+\begin{itemize}
+    \item [Implicación teórica principal y su contribución al conocimiento del área]
+    \item [Implicación práctica principal y su aplicabilidad en contextos reales]
+    \item [Implicaciones para futuras investigaciones y direcciones de estudio]
+    \item [Agregar más implicaciones según sea necesario]
+\end{itemize}
+
+\section{Conclusiones}
+
+\subsection{Respuestas a las Preguntas de Investigación}
+
+Con base en los resultados obtenidos, se responden las preguntas planteadas inicialmente:
+
+\textbf{Pregunta 1:} [Repetir la primera pregunta de investigación]
+
+\textbf{Respuesta:} [Proporcionar respuesta basada en los resultados del análisis]
+
+\textbf{Pregunta 2:} [Repetir la segunda pregunta de investigación]
+
+\textbf{Respuesta:} [Proporcionar segunda respuesta basada en los resultados]
+
+\textbf{Pregunta 3:} [Si hay más preguntas, agregarlas aquí]
+
+\textbf{Respuesta:} [Proporcionar respuesta correspondiente]
+
+\subsection{Cumplimiento de Objetivos}
+
+[Evaluar el cumplimiento de cada objetivo específico planteado]
+
+\subsection{Recomendaciones}
+
+Basándose en los hallazgos del estudio, se proponen las siguientes recomendaciones:
+
+\begin{enumerate}
+    \item [Primera recomendación para la práctica o investigación futura]
+    \item [Segunda recomendación relacionada con la metodología o el diseño]
+    \item [Tercera recomendación para el desarrollo teórico del área]
+    \item [Agregar más recomendaciones según sea necesario]
+\end{enumerate}
+
+\newpage
+
+% ============================================
+% REFERENCIAS - APA v7
+% ============================================
+\section{Referencias}
+
+\printbibliography[heading=none]
+
+% NOTA: Para citar en el texto, usa:
+% \textcite{clave} para citas narrativas: "Autor (2020) afirma que..."
+% \parencite{clave} para citas parentéticas: "... (Autor, 2020)"
+
+\end{document}

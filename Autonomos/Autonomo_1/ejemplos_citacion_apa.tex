@@ -1,0 +1,158 @@
+% ============================================
+% EJEMPLOS DE CITACIÓN APA v7
+% ============================================
+% Copia y pega estos ejemplos en tu documento principal
+
+% ============================================
+% 1. CITAS NARRATIVAS (autor es parte de la oración)
+% ============================================
+
+% Un autor:
+\textcite{wickham2016} desarrolló el paquete ggplot2 para visualización de datos.
+% Resultado: Wickham (2016) desarrolló el paquete ggplot2...
+
+% Dos autores:
+\textcite{henderson1981} propusieron un método interactivo.
+% Resultado: Henderson y Velleman (1981) propusieron...
+
+% Tres o más autores:
+\textcite{james2013} presentan técnicas de aprendizaje estadístico.
+% Resultado: James et al. (2013) presentan...
+
+% ============================================
+% 2. CITAS PARENTÉTICAS (autor entre paréntesis)
+% ============================================
+
+% Una fuente:
+La regresión lineal es una técnica fundamental \parencite{montgomery2012}.
+% Resultado: ...técnica fundamental (Montgomery et al., 2012).
+
+% Múltiples fuentes (se ordenan alfabéticamente):
+Los métodos estadísticos \parencite{james2013, montgomery2012, kutner2005}.
+% Resultado: ...métodos estadísticos (James et al., 2013; Kutner et al., 2005; Montgomery et al., 2012).
+
+% ============================================
+% 3. CITAS CON NÚMERO DE PÁGINA
+% ============================================
+
+% Cita narrativa con página:
+\textcite[p.~45]{montgomery2012} explica que...
+% Resultado: Montgomery et al. (2012, p. 45) explica que...
+
+% Cita parentética con página:
+"La correlación mide la fuerza de asociación" \parencite[p.~123]{cohen2003}.
+% Resultado: ...asociación" (Cohen et al., 2003, p. 123).
+
+% Rango de páginas:
+\parencite[pp.~25-30]{james2013}
+% Resultado: (James et al., 2013, pp. 25-30)
+
+% ============================================
+% 4. CITAS DE CITAS SECUNDARIAS
+% ============================================
+
+% Cuando citas un trabajo citado en otro trabajo:
+\textcite{pearson1896}, citado en \textcite{cohen2003}, estableció...
+% Resultado: Pearson (1896), citado en Cohen et al. (2003), estableció...
+
+% ============================================
+% 5. CITAS DE SOFTWARE Y PAQUETES
+% ============================================
+
+% Software R:
+Todos los análisis se realizaron en R \parencite{rcore2023}.
+% Resultado: ...en R (R Core Team, 2023).
+
+% Paquete específico:
+Se utilizó ggplot2 \parencite{wickham2016} para visualización.
+% Resultado: ...ggplot2 (Wickham, 2016) para...
+
+% ============================================
+% 6. CITAS DE ARTÍCULOS
+% ============================================
+
+% Artículo de revista:
+La prueba de Shapiro-Wilk \parencite{shapiro1965} evalúa normalidad.
+% Resultado: ...Shapiro-Wilk (Shapiro & Wilk, 1965) evalúa...
+
+% Artículo con DOI:
+El test de Breusch-Pagan \parencite{breusch1979} detecta heterocedasticidad.
+% Resultado: ...Breusch-Pagan (Breusch & Pagan, 1979) detecta...
+
+% ============================================
+% 7. CITAS EN TABLAS Y FIGURAS
+% ============================================
+
+\begin{table}[H]
+    \centering
+    \caption{Estadísticas Descriptivas de Variables \parencite{motor1974}}
+    \begin{tabular}{lcc}
+        \toprule \textbf{Variable} & \textbf{M} & \textbf{DE} \\
+        \midrule Peso              & 3.22       & 0.98        \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:ejemplo}
+\end{table}
+
+% ============================================
+% 8. MÚLTIPLES CITAS DEL MISMO AUTOR
+% ============================================
+
+% Si tienes varios trabajos del mismo autor en el mismo año,
+% biblatex agregará automáticamente letras (2020a, 2020b)
+
+% ============================================
+% 9. CITAS EN NOTAS AL PIE (si las usas)
+% ============================================
+
+Este concepto es fundamental\footnote{\textcite{montgomery2012} proporciona una explicación
+detallada.}.
+
+% ============================================
+% 10. CITAS SIN AUTOR (organizaciones)
+% ============================================
+
+% En el .bib usa:
+% author = {{R Core Team}}  % Dobles llaves para mantener como organización
+
+El lenguaje R \parencite{rcore2023} es ampliamente utilizado.
+% Resultado: ...R (R Core Team, 2023) es...
+
+% ============================================
+% CONSEJOS IMPORTANTES:
+% ============================================
+
+% 1. SIEMPRE usa \textcite{} o \parencite{}, NO uses \cite{}
+% 2. Compila 2-3 veces para que las citas se actualicen
+% 3. Las referencias se generan automáticamente al final
+% 4. Todas las citas deben estar en bibliografia.bib
+% 5. APA usa "y" (and) entre autores, biblatex lo hace automáticamente
+% 6. Para "et al." después de 3 autores, es automático en APA v7
+
+% ============================================
+% EJEMPLOS COMPLETOS EN CONTEXTO:
+% ============================================
+
+% Introducción con citas:
+La regresión lineal simple es una técnica estadística fundamental \parencite{montgomery2012}
+que permite modelar la relación entre dos variables. \textcite{james2013} describen
+esta técnica como una de las más utilizadas en análisis de datos. El método fue
+originalmente desarrollado por \textcite{pearson1896} y ha sido ampliamente estudiado
+\parencite{kutner2005, cohen2003}.
+
+% Metodología con citas:
+Se utilizó el software R versión 4.3.0 \parencite{rcore2023} para realizar todos
+los análisis estadísticos. La visualización de datos se realizó mediante el paquete
+ggplot2 \parencite{wickham2016}, siguiendo los principios de gramática de gráficos.
+
+% Resultados con citas:
+Los datos provinieron del dataset mtcars \parencite{henderson1981, motor1974}, que
+contiene información sobre 32 automóviles. La normalidad de los datos se evaluó
+mediante la prueba de Shapiro-Wilk \parencite{shapiro1965}, mientras que la
+homocedasticidad se verificó con el test de Breusch-Pagan \parencite{breusch1979}.
+
+% Discusión con citas:
+Estos resultados coinciden con los reportados por \textcite{montgomery2012} en
+su análisis de modelos de regresión. Como señalan \textcite[p.~156]{james2013}, "la
+correlación negativa entre peso y rendimiento es consistente con las leyes
+físicas del movimiento".
