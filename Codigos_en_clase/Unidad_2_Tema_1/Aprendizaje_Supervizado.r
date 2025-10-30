@@ -39,3 +39,18 @@ library(rpart.plot)
 
 arbol <- rpart(Sobreviviente~Clase+Sexo+Edad+Hijos,data=df)
 rpart.plot(arbol)
+
+indices <- sample(1:nrow(df),600,replace = F)
+df_entrena <- df[indices,]
+df_valida <- df[-indices,]
+
+arbol2 <- rpart(Sobreviviente~Clase+Sexo+Edad+Hijos,data=df_entrena)
+rpart.plot(arbol2)
+
+predic <- predict(arbol2,df_valida,type = "class")
+df_valida$Prediccion <- predic
+
+(sum(diag(table(df_valida$Sobreviviente,df_valida$Prediccion))))/nrow(df_valida)
+
+library(caret)
+confusionMatrix(table(df_valida$Sobreviviente,df_valida$Prediccion))
