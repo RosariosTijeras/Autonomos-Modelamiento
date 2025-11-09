@@ -1,0 +1,165 @@
+"Age","Gender","Income","Education","Marital.Status","Number.of.Children","Home.Ownership","Score"
+44,"Male",87500,"Master's Degree","Single",0,"Owned",91
+51,"Male",140000,"Bachelor's Degree","Married",0,"Owned",83
+46,"Female",97500,"High School Diploma","Married",1,"Owned",89
+27,"Female",37500,"High School Diploma","Single",0,"Rented",57
+42,"Male",110000,"Master's Degree","Single",0,"Owned",89
+29,"Female",27500,"High School Diploma","Single",0,"Rented",44
+37,"Female",72500,"Bachelor's Degree","Married",2,"Owned",92
+43,"Male",92500,"Master's Degree","Single",0,"Owned",82
+28,"Female",30000,"Associate's Degree","Single",0,"Rented",55
+38,"Female",67500,"Bachelor's Degree","Married",2,"Owned",84
+25,"Female",57500,"Bachelor's Degree","Single",0,"Rented",67
+45,"Female",115000,"Bachelor's Degree","Married",3,"Owned",87
+28,"Male",75000,"Bachelor's Degree","Single",0,"Rented",77
+47,"Female",97500,"Doctorate","Married",1,"Owned",97
+49,"Female",77500,"Doctorate","Married",1,"Owned",92
+31,"Male",95000,"Doctorate","Single",0,"Rented",82
+27,"Female",37500,"High School Diploma","Single",0,"Rented",59
+37,"Female",75000,"Bachelor's Degree","Married",2,"Owned",99
+51,"Male",135000,"Bachelor's Degree","Married",0,"Owned",88
+36,"Female",95000,"Master's Degree","Married",2,"Owned",84
+38,"Female",67500,"Bachelor's Degree","Married",2,"Owned",92
+30,"Male",117500,"Master's Degree","Married",2,"Owned",86
+36,"Female",85000,"Master's Degree","Married",2,"Owned",90
+31,"Male",65000,"Bachelor's Degree","Single",0,"Rented",74
+28,"Female",32500,"Associate's Degree","Single",0,"Rented",54
+26,"Female",55000,"Bachelor's Degree","Married",1,"Owned",61
+37,"Female",77500,"Bachelor's Degree","Married",2,"Owned",86
+53,"Male",122500,"Associate's Degree","Married",0,"Owned",86
+45,"Female",100000,"Bachelor's Degree","Married",3,"Owned",83
+34,"Male",47500,"Associate's Degree","Single",0,"Rented",70
+27,"Female",37500,"High School Diploma","Single",0,"Rented",59
+35,"Female",85000,"Doctorate","Married",1,"Owned",81
+43,"Male",92500,"Master's Degree","Single",0,"Owned",97
+25,"Female",55000,"Bachelor's Degree","Single",0,"Rented",68
+48,"Female",82500,"Doctorate","Married",1,"Owned",84
+41,"Male",120000,"Doctorate","Single",0,"Owned",96
+45,"Female",110000,"Bachelor's Degree","Married",3,"Owned",99
+53,"Male",125000,"Associate's Degree","Married",0,"Owned",91
+26,"Female",47500,"Associate's Degree","Single",0,"Rented",73
+30,"Male",112500,"Master's Degree","Married",2,"Owned",85
+42,"Male",95000,"Master's Degree","Single",0,"Owned",92
+45,"Female",105000,"Bachelor's Degree","Married",3,"Owned",87
+42,"Male",100000,"Master's Degree","Single",0,"Owned",87
+33,"Male",52500,"High School Diploma","Single",0,"Rented",71
+32,"Male",85000,"Master's Degree","Single",0,"Rented",82
+25,"Female",62500,"Bachelor's Degree","Single",0,"Rented",66
+32,"Male",57500,"Associate's Degree","Single",0,"Rented",67
+52,"Male",135000,"High School Diploma","Married",0,"Owned",86
+31,"Male",70000,"Bachelor's Degree","Single",0,"Rented",74
+33,"Male",52500,"High School Diploma","Single",0,"Rented",80
+30,"Male",105000,"Master's Degree","Married",2,"Owned",89
+39,"Female",62500,"Bachelor's Degree","Married",2,"Owned",99
+35,"Female",85000,"Doctorate","Married",1,"Owned",95
+31,"Male",60000,"Bachelor's Degree","Single",0,"Rented",64
+38,"Female",65000,"Bachelor's Degree","Married",2,"Owned",94
+49,"Female",77500,"Doctorate","Married",1,"Owned",98
+36,"Female",85000,"Master's Degree","Married",2,"Owned",90
+39,"Female",62500,"Bachelor's Degree","Married",2,"Owned",98
+35,"Female",90000,"Doctorate","Married",1,"Owned",96
+33,"Male",52500,"High School Diploma","Single",0,"Rented",64
+34,"Male",105000,"Bachelor's Degree","Married",1,"Rented",98
+34,"Male",47500,"Associate's Degree","Single",0,"Rented",61
+44,"Male",87500,"Master's Degree","Single",0,"Owned",92
+29,"Female",27500,"High School Diploma","Single",0,"Rented",51
+34,"Male",45000,"Associate's Degree","Single",0,"Rented",73
+40,"Male",142500,"High School Diploma","Single",0,"Owned",85
+42,"Male",100000,"Master's Degree","Single",0,"Owned",94
+28,"Female",32500,"Associate's Degree","Single",0,"Rented",46
+40,"Male",130000,"High School Diploma","Single",0,"Owned",94
+47,"Female",95000,"Doctorate","Married",1,"Owned",83
+36,"Female",80000,"Master's Degree","Married",2,"Owned",91
+41,"Male",110000,"Doctorate","Single",0,"Owned",82
+40,"Male",125000,"High School Diploma","Single",0,"Owned",90
+33,"Male",52500,"High School Diploma","Single",0,"Rented",69
+50,"Male",150000,"Master's Degree","Married",0,"Owned",86
+31,"Male",67500,"Bachelor's Degree","Single",0,"Rented",70
+26,"Female",50000,"Associate's Degree","Single",0,"Rented",73
+51,"Male",150000,"Bachelor's Degree","Married",0,"Owned",92
+34,"Male",47500,"Associate's Degree","Single",0,"Rented",79
+35,"Female",80000,"Doctorate","Married",1,"Owned",85
+40,"Male",142500,"High School Diploma","Single",0,"Owned",97
+35,"Female",75000,"Doctorate","Married",1,"Owned",85
+53,"Male",115000,"Associate's Degree","Married",0,"Owned",91
+53,"Male",127500,"Associate's Degree","Married",0,"Owned",87
+27,"Female",37500,"High School Diploma","Single",0,"Rented",47
+26,"Female",45000,"Associate's Degree","Single",0,"Rented",77
+46,"Female",90000,"High School Diploma","Married",1,"Owned",97
+32,"Male",57500,"Associate's Degree","Single",0,"Rented",74
+35,"Female",85000,"Doctorate","Married",1,"Owned",91
+51,"Male",145000,"Bachelor's Degree","Married",0,"Owned",87
+49,"Female",65000,"Doctorate","Married",1,"Owned",83
+48,"Female",82500,"Doctorate","Married",1,"Owned",86
+45,"Female",105000,"Bachelor's Degree","Married",3,"Owned",92
+31,"Male",65000,"Bachelor's Degree","Single",0,"Rented",68
+44,"Male",87500,"Master's Degree","Single",0,"Owned",93
+30,"Male",112500,"Master's Degree","Married",2,"Owned",86
+28,"Female",32500,"Associate's Degree","Single",0,"Rented",58
+29,"Female",27500,"High School Diploma","Single",0,"Rented",40
+48,"Female",85000,"Doctorate","Married",1,"Owned",96
+38,"Female",67500,"Bachelor's Degree","Married",2,"Owned",96
+43,"Male",80000,"Master's Degree","Single",0,"Owned",83
+44,"Male",87500,"Master's Degree","Single",0,"Owned",89
+52,"Male",130000,"High School Diploma","Married",0,"Owned",92
+51,"Male",140000,"Bachelor's Degree","Married",0,"Owned",88
+40,"Male",130000,"High School Diploma","Single",0,"Owned",99
+44,"Male",75000,"Master's Degree","Single",0,"Owned",85
+29,"Female",68000,"Doctorate","Married",2,"Owned",73
+30,"Male",112500,"Master's Degree","Married",2,"Owned",93
+43,"Male",92500,"Master's Degree","Single",0,"Owned",97
+48,"Female",87500,"Doctorate","Married",1,"Owned",94
+29,"Female",27500,"High School Diploma","Single",0,"Rented",60
+48,"Female",70000,"Doctorate","Married",1,"Owned",86
+26,"Female",40000,"Associate's Degree","Single",0,"Rented",70
+52,"Male",130000,"High School Diploma","Married",0,"Owned",90
+46,"Female",95000,"High School Diploma","Married",1,"Owned",95
+35,"Female",90000,"Doctorate","Married",1,"Owned",86
+52,"Male",125000,"High School Diploma","Married",0,"Owned",93
+53,"Male",122500,"Associate's Degree","Married",0,"Owned",95
+30,"Male",105000,"Master's Degree","Married",2,"Owned",85
+35,"Female",80000,"Doctorate","Married",1,"Owned",81
+30,"Male",117500,"Master's Degree","Married",2,"Owned",93
+33,"Female",82000,"Master's Degree","Married",1,"Owned",89
+39,"Female",62500,"Bachelor's Degree","Married",2,"Owned",81
+41,"Male",105000,"Doctorate","Single",0,"Owned",82
+38,"Female",67500,"Bachelor's Degree","Married",2,"Owned",95
+46,"Female",95000,"High School Diploma","Married",1,"Owned",92
+52,"Male",137500,"High School Diploma","Married",0,"Owned",95
+36,"Female",90000,"Master's Degree","Married",2,"Owned",99
+47,"Female",85000,"Doctorate","Married",1,"Owned",98
+39,"Female",60000,"Bachelor's Degree","Married",2,"Owned",83
+49,"Female",77500,"Doctorate","Married",1,"Owned",93
+34,"Male",47500,"Associate's Degree","Single",0,"Rented",79
+32,"Male",57500,"Associate's Degree","Single",0,"Rented",71
+27,"Female",35000,"High School Diploma","Single",0,"Rented",49
+42,"Male",105000,"Master's Degree","Single",0,"Owned",89
+25,"Female",57500,"Bachelor's Degree","Single",0,"Rented",66
+43,"Male",95000,"Master's Degree","Single",0,"Owned",81
+28,"Female",32500,"Associate's Degree","Single",0,"Rented",56
+50,"Male",162500,"Master's Degree","Married",0,"Owned",88
+50,"Male",160000,"Master's Degree","Married",0,"Owned",90
+49,"Female",77500,"Doctorate","Married",1,"Owned",99
+26,"Female",45000,"Associate's Degree","Single",0,"Rented",66
+37,"Female",70000,"Bachelor's Degree","Married",2,"Owned",86
+30,"Male",100000,"Master's Degree","Married",2,"Owned",95
+46,"Female",102500,"High School Diploma","Married",1,"Owned",83
+29,"Female",25000,"High School Diploma","Single",0,"Rented",48
+41,"Male",110000,"Doctorate","Single",0,"Owned",98
+25,"Female",50000,"Bachelor's Degree","Single",0,"Rented",82
+50,"Male",155000,"Master's Degree","Married",0,"Owned",98
+25,"Female",60000,"Bachelor's Degree","Single",0,"Rented",65
+39,"Female",62500,"Bachelor's Degree","Married",2,"Owned",96
+35,"Female",90000,"Doctorate","Married",1,"Owned",93
+25,"Female",57500,"Bachelor's Degree","Single",0,"Rented",79
+47,"Female",90000,"Doctorate","Married",1,"Owned",98
+32,"Male",55000,"Associate's Degree","Single",0,"Rented",80
+32,"Male",57500,"Associate's Degree","Single",0,"Rented",70
+37,"Female",72500,"Bachelor's Degree","Married",2,"Owned",94
+50,"Male",155000,"Master's Degree","Married",0,"Owned",84
+41,"Male",115000,"Doctorate","Single",0,"Owned",82
+47,"Female",90000,"Doctorate","Married",1,"Owned",82
+33,"Male",50000,"High School Diploma","Single",0,"Rented",69
+30,"Male",117500,"Master's Degree","Married",2,"Owned",96
+25,"Female",60000,"Bachelor's Degree","Single",0,"Rented",68
+25,"Female",55000,"Bachelor's Degree","Single",0,"Rented",79
