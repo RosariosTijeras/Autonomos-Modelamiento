@@ -15,7 +15,6 @@ https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/ab
 ⏳ finde → Pendiente (variable binaria)
 ⏳ denoche → Pendiente (variable binaria)
 
-
 2️⃣ Análisis de Variables Categóricas (después de terminar Date)
 tipo (Primary Type): Chi-cuadrado + Cramér's V + gráfico de tasas
 lugar (Location Description): Chi-cuadrado + Cramér's V + gráfico
@@ -28,20 +27,15 @@ domestico (Domestic): Ya lo analizaste antes, solo confirmar que se queda
 Validar coordenadas dentro de límites de Chicago
 Usar enfoque híbrido: rectangular + GeoJSON (si tienes el archivo)
 Filtrar registros fuera de Chicago
+
 Tratar 93,963 NAs en coordenadas
-
-4️⃣ Eliminación de Variables Redundantes
-Eliminar estas columnas que ya decidiste:
-
-bloque, IUCR, descripcion, unidad_policial (Beat)
-ward, community_area, fbi_code
-coordenada_x, coordenada_y
-year (redundante con año derivada)
-updated_on, localizacion
-
 5️⃣ Tratamiento de NAs
 lugar: Imputar como "DESCONOCIDO" (15,062 NAs)
 Latitud/Longitud: Eliminar filas o imputar según análisis (93,963 NAs)
+
+
+## falta por hacer
+
 
 6️⃣ Verificación Final del Dataset
 Confirmar tipos de datos correctos
@@ -68,8 +62,23 @@ Curva ROC y AUC
 Importancia de variables
 
 
+
 Organización de celdas:
 
 Agrupa todo el análisis de Date en una sección
 Luego crea una nueva sección para variables categóricas
 Luego otra para outliers geográficos
+
+
+
+bibliografia
+
+
+Chicago Police Department. (2024). 2023 Chicago Police Department Annual Report. https://www.chicagopolice.org/wp-content/uploads/2024-Annual-Report-Executive-Summary.pdf
+Chicago Police Department. (2025). 2024 in Review. https://www.chicagopolice.org/wp-content/uploads/2024-in-Review.pdf
+Chicago Police Department. (2025). 2024 Year-End Report (Informe del consultor independiente sobre el decreto de consentimiento). https://www.chicagopolice.org/wp-content/uploads/2024-YEAR-END.pdf
+Illinois Policy. (2024, marzo 12). Violent crime up 18%, arrests down 43% in Chicago over 10 years. https://www.illinoispolicy.org/press-releases/violent-crime-up-18-arrests-down-43-in-chicago-over-10-years/
+Field, A. (2018). Discovering statistics using IBM SPSS Statistics (5ª ed.). SAGE Publications.
+Cramér, H. (1946). Mathematical methods of statistics. Princeton University Press.
+Pearson, K. (1896). Mathematical contributions to the theory of evolution. III. Regression, heredity, and panmixia. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 187, 253-318.
+Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., & Liu, T.-Y. (2017). LightGBM: A highly efficient gradient boosting decision tree. Advances in Neural Information Processing Systems (NIPS 2017), 30, 3146–3154. https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf
