@@ -1,3 +1,75 @@
-https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+geojson
+https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-City/qqq8-j68g/about_data
 
-https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2025-09.parquet
+dataset
+https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data
+
+
+# analizar la correlacion de cada variable con la variable objetivo para saber cual eliminar y cual no
+
+## Análisis de variables temporales derivadas de Date:
+✅ hora → Correlación de Pearson
+✅ dia → Chi-cuadrado + Cramér's V (convertida a factor)
+✅ mes → Chi-cuadrado + Cramér's V (convertida a factor)
+⏳ año → Pendiente (deberías hacer Chi-cuadrado + Cramér's V, convertida a factor)
+⏳ finde → Pendiente (variable binaria)
+⏳ denoche → Pendiente (variable binaria)
+
+
+2️⃣ Análisis de Variables Categóricas (después de terminar Date)
+tipo (Primary Type): Chi-cuadrado + Cramér's V + gráfico de tasas
+lugar (Location Description): Chi-cuadrado + Cramér's V + gráfico
+⚠️ Problema: tiene 15,062 NAs y muchas categorías (150+)
+Solución: agrupar categorías raras y crear categoría "DESCONOCIDO" para NAs
+distrito (District): Chi-cuadrado + Cramér's V + gráfico
+domestico (Domestic): Ya lo analizaste antes, solo confirmar que se queda
+
+3️⃣ Detección de Outliers Geográficos (Latitud/Longitud)
+Validar coordenadas dentro de límites de Chicago
+Usar enfoque híbrido: rectangular + GeoJSON (si tienes el archivo)
+Filtrar registros fuera de Chicago
+Tratar 93,963 NAs en coordenadas
+
+4️⃣ Eliminación de Variables Redundantes
+Eliminar estas columnas que ya decidiste:
+
+bloque, IUCR, descripcion, unidad_policial (Beat)
+ward, community_area, fbi_code
+coordenada_x, coordenada_y
+year (redundante con año derivada)
+updated_on, localizacion
+
+5️⃣ Tratamiento de NAs
+lugar: Imputar como "DESCONOCIDO" (15,062 NAs)
+Latitud/Longitud: Eliminar filas o imputar según análisis (93,963 NAs)
+
+6️⃣ Verificación Final del Dataset
+Confirmar tipos de datos correctos
+Verificar que no queden NAs problemáticos
+Resumen de variables finales
+
+7️⃣ División Train/Test (80/20)
+CRÍTICO: Dividir ANTES de balancear
+Usar createDataPartition() de caret
+
+8️⃣ Balanceo con ROSE
+Balancear SOLO el conjunto de entrenamiento
+Dejar el conjunto de prueba desbalanceado (refleja realidad)
+
+9️⃣ Entrenamiento del Random Forest
+Configurar parámetros
+Entrenar modelo
+Validación cruzada
+
+🔟 Evaluación del Modelo
+Matriz de confusión
+Métricas: Accuracy, Precision, Recall, F1-Score
+Curva ROC y AUC
+Importancia de variables
+
+
+Organización de celdas:
+
+Agrupa todo el análisis de Date en una sección
+Luego crea una nueva sección para variables categóricas
+Luego otra para outliers geográficos
