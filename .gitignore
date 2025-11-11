@@ -147,5 +147,5 @@ output/
 
 datos_unidos.csv
 datos_unidos.rds
-Crimes.csv
-prueba.ipynb
+crimes.csv
+crimes.parquet
