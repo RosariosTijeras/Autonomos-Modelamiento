@@ -50,7 +50,7 @@ Usar createDataPartition() de caret
 Balancear SOLO el conjunto de entrenamiento
 Dejar el conjunto de prueba desbalanceado (refleja realidad)
 
-9️⃣ Entrenamiento del Random Forest
+9️⃣ Entrenamiento de arbol de decision y random Forest (lightgbm)
 Configurar parámetros
 Entrenar modelo
 Validación cruzada
